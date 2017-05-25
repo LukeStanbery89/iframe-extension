@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "PWI Fund",
+  "description": "description",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "fund.html",
+    "default_title": "PWI Fund"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.w3schools.com/*"
+      ],
+      "js": [
+        "fund.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
